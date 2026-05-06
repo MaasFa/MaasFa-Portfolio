@@ -1,10 +1,10 @@
 # Maasfa Khan - Portfolio Website
 
-![Portfolio Preview](client/public/favicon.png) <!-- You can replace this with an actual screenshot of your website later -->
+![Portfolio Preview](client/public/favicon.ico) 
 
 Welcome to my personal portfolio website! This project showcases my journey, skills, projects, and certifications in Data Science, Artificial Intelligence, Machine Learning, and Software Engineering. 
 
-You can view the live website here: **[Link to your live website, e.g., maasfa-portfolio.onrender.com]**
+You can view the live website here:
 
 ## ✨ Features
 
