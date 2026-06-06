@@ -108,6 +108,13 @@ async function seedDatabase() {
       imageUrl: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=800&auto=format&fit=crop"
     },
     {
+      title: "Travel Assistant Chatbot",
+      description: "An intelligent conversational travel assistant chatbot designed to plan itineraries, suggest destinations, and answer travel queries. Built to offer a personalized and interactive travel planning experience.",
+      technologies: ["Python", "NLP", "LLM", "LangChain", "Gradio"],
+      link: "https://github.com/MaasFa/Travel-Assistant-Chatbot",
+      imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800&auto=format&fit=crop"
+    },
+    {
       title: "Sentiment Analysis Live ML App",
       description: "Real-time sentiment analysis web app classifying any sentence as POSITIVE or NEGATIVE. Built with HuggingFace Transformers for state-of-the-art NLP results without custom model training.",
       technologies: ["Python", "HuggingFace", "Transformers", "NLP", "Gradio"],
