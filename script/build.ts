@@ -17,6 +17,9 @@ await build({
   format: "cjs",
   outfile: "dist/index.cjs",
   packages: "external",
+  define: {
+    "process.env.NODE_ENV": '"production"',
+  },
 });
 
 console.log("✅ Build complete!");
