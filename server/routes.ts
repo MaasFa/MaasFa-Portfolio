@@ -49,8 +49,8 @@ async function seedDatabase() {
   await storage.reset();
 
   // ── SKILLS ─────────────────────────────────────────────────────────────────
-  // Languages
   const skills = [
+    // Languages
     { name: "Python", category: "Languages", proficiency: 95, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
     { name: "SQL (MySQL)", category: "Languages", proficiency: 85, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
 
@@ -58,14 +58,14 @@ async function seedDatabase() {
     { name: "Jupyter Notebook", category: "Tools / Platforms", proficiency: 90, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
     { name: "Git", category: "Tools / Platforms", proficiency: 85, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
     { name: "GitHub", category: "Tools / Platforms", proficiency: 85, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-    { name: "HuggingFace", category: "Tools / Platforms", proficiency: 80, iconUrl: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
+    { name: "Hugging Face", category: "Tools / Platforms", proficiency: 80, iconUrl: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
     { name: "Gradio", category: "Tools / Platforms", proficiency: 75, iconUrl: "https://www.svgrepo.com/show/306453/gradio.svg" },
     { name: "Tableau", category: "Tools / Platforms", proficiency: 75, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-icon-original.svg" },
+    { name: "Botpress", category: "Tools / Platforms", proficiency: 70, iconUrl: "https://avatars.githubusercontent.com/u/23510677?s=200&v=4" },
 
     // ML / DL Libraries
     { name: "PyTorch", category: "ML / DL Libraries", proficiency: 75, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
     { name: "Scikit-learn", category: "ML / DL Libraries", proficiency: 82, iconUrl: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
-    { name: "LangChain", category: "ML / DL Libraries", proficiency: 70, iconUrl: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
     { name: "Transformers", category: "ML / DL Libraries", proficiency: 78, iconUrl: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
     { name: "BERT", category: "ML / DL Libraries", proficiency: 75, iconUrl: "https://cdn-icons-png.flaticon.com/512/4341/4341160.png" },
     { name: "GPT-2", category: "ML / DL Libraries", proficiency: 72, iconUrl: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png" },
@@ -73,6 +73,13 @@ async function seedDatabase() {
     { name: "NumPy", category: "ML / DL Libraries", proficiency: 88, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
     { name: "Matplotlib", category: "ML / DL Libraries", proficiency: 90, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" },
     { name: "Seaborn", category: "ML / DL Libraries", proficiency: 85, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/plotly/plotly-original.svg" },
+
+    // GenAI & LLM Tools
+    { name: "OpenAI API", category: "GenAI & LLM Tools", proficiency: 80, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openai/openai-original.svg" },
+    { name: "Gemini API", category: "GenAI & LLM Tools", proficiency: 82, iconUrl: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" },
+    { name: "GitHub Copilot", category: "GenAI & LLM Tools", proficiency: 78, iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    { name: "LangChain", category: "GenAI & LLM Tools", proficiency: 70, iconUrl: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
+    { name: "Prompt Engineering", category: "GenAI & LLM Tools", proficiency: 85, iconUrl: "https://cdn-icons-png.flaticon.com/512/4341/4341160.png" },
   ];
   for (const skill of skills) await storage.createSkill(skill);
 
@@ -140,12 +147,41 @@ async function seedDatabase() {
 
   // ── CERTIFICATIONS & VIRTUAL EXPERIENCE ─────────────────────────────────────
   const certs = [
-    { name: "BCG X Data Science Job Simulation", issuer: "Forage", date: "Feb 2026", imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" },
-    { name: "Deloitte Data Analytics Job Simulation", issuer: "Forage", date: "Jul 2025", imageUrl: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop" },
-    { name: "IBM PBEL Generative AI Project Program", issuer: "IBM Virtual Internship", date: "Feb–Mar 2026", imageUrl: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=800&auto=format&fit=crop" },
-    { name: "Getting Started with Artificial Intelligence", issuer: "IBM SkillsBuild", date: "Nov 2024", imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop" },
-    { name: "Intro to SQL", issuer: "Kaggle", date: "Oct 2025", imageUrl: "https://images.unsplash.com/photo-1599658880436-c61792e70672?q=80&w=800&auto=format&fit=crop" },
-    { name: "AI for Impact APAC Hackathon 2024", issuer: "Google Cloud × Hack2Skill", date: "2024", imageUrl: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" },
+    {
+      name: "IBM PBEL Generative AI Virtual Internship",
+      issuer: "IBM Developer Skills Network",
+      date: "Feb–Mar 2026",
+      description: "Completed IBM's industry-grade GenAI program (PBELGEN231IN); earned passing grade assessed by IBM IBMCEP. Capstone: Fake News Generation & Detection System using BERT & GPT-2.",
+      imageUrl: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      name: "Tata iQ GenAI Data Analytics Job Simulation",
+      issuer: "Forage",
+      date: "Jun 2026",
+      description: "EDA & Risk Profiling, AI-Powered Delinquency Prediction, Collections Strategy Design, Agentic AI & Ethical AI Implementation.",
+      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      name: "BCG X Data Science Job Simulation",
+      issuer: "Forage",
+      date: "Feb 2026",
+      description: "EDA, Feature Engineering, Modeling & Evaluation, and Business Insights across a real-world business dataset.",
+      imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      name: "Deloitte Data Analytics Job Simulation",
+      issuer: "Forage",
+      date: "Jul 2025",
+      description: "Created a data dashboard using Tableau and used Excel to classify data and draw business conclusions.",
+      imageUrl: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      name: "AI for Impact APAC Hackathon 2024",
+      issuer: "Google Cloud × Hack2Skill",
+      date: "2024",
+      description: "Submitted idea for social-first AI hackathon (APAC region) focused on impactful AI solutions.",
+      imageUrl: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
+    },
   ];
   for (const cert of certs) await storage.createCertification(cert);
 }

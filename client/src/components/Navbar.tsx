@@ -73,7 +73,7 @@ export function Navbar() {
           </Button>
           <Button
             className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 shadow-lg shadow-primary/20 hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            onClick={() => window.open("/resume.pdf", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1MznyPeb0MDQ8Fx7QVTCctvL4geXjQULo/view?usp=drive_link", "_blank")}
           >
             Resume
           </Button>
@@ -117,7 +117,7 @@ export function Navbar() {
           ))}
           <Button
             className="w-full mt-2"
-            onClick={() => window.open("https://drive.google.com/file/d/1OkHCoIdRjWj4he-i7y0WGKxawMql9RGV/view?usp=drive_link", "_blank")}>
+            onClick={() => window.open("https://drive.google.com/file/d/1MznyPeb0MDQ8Fx7QVTCctvL4geXjQULo/view?usp=drive_link", "_blank")}>
             Download Resume
           </Button>
         </div>

@@ -92,7 +92,7 @@ export default function Home() {
                     View Projects <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </ScrollLink>
-                <Button variant="outline" size="lg" className="w-full sm:w-auto text-base h-12 px-8 rounded-full border-2 hover:bg-secondary/50" onClick={() => window.open("https://drive.google.com/file/d/1OkHCoIdRjWj4he-i7y0WGKxawMql9RGV/view?usp=drive_link", "_blank")}>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto text-base h-12 px-8 rounded-full border-2 hover:bg-secondary/50" onClick={() => window.open("https://drive.google.com/file/d/1MznyPeb0MDQ8Fx7QVTCctvL4geXjQULo/view?usp=drive_link", "_blank")}>
                   Download Resume <Download className="ml-2 w-4 h-4" />
                 </Button>
               </motion.div>
@@ -237,8 +237,11 @@ export default function Home() {
 
                     {/* Back Face */}
                     <div className="absolute inset-0 w-full h-full bg-primary text-primary-foreground rounded-2xl p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                      <h4 className="text-xl font-bold mb-2">{cert.issuer}</h4>
-                      <p className="text-sm opacity-90 mb-4 font-medium">{cert.date}</p>
+                      <h4 className="text-xl font-bold mb-1">{cert.issuer}</h4>
+                      <p className="text-sm opacity-90 mb-3 font-medium">{cert.date}</p>
+                      {(cert as any).description && (
+                        <p className="text-xs opacity-80 mb-3 leading-relaxed">{(cert as any).description}</p>
+                      )}
 
                       {cert.link && (
                         <Button

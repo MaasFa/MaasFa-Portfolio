@@ -27,6 +27,7 @@ export const certifications = pgTable("certifications", {
   date: text("date"),
   link: text("link"),
   imageUrl: text("image_url"),
+  description: text("description"),
 });
 
 export const messages = pgTable("messages", {
