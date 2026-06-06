@@ -4,7 +4,7 @@
 
 Welcome to my personal portfolio website! This project showcases my journey, skills, projects, and certifications in Data Science, Artificial Intelligence, Machine Learning, and Software Engineering. 
 
-You can view the live website here: **[Link to your live website, e.g., maasfa-portfolio.onrender.com]**
+You can view the live website here: https://maasfa-portfolio.onrender.com/
 
 ## ✨ Features
 
